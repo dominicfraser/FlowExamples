@@ -1,9 +1,15 @@
 {
-  "extends": "skyscanner-with-prettier",
+  "extends": [
+    "skyscanner-with-prettier",
+    "plugin:flowtype/recommended"
+  ],
   "env": {
     "browser": true,
     "jest": true
   },
+  "plugins": [
+    "flowtype"
+  ],
   "rules": {
     "import/no-extraneous-dependencies": [
       "error",
