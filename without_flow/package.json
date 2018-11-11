@@ -9,6 +9,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "prettier": "prettier --config .prettierrc --write \"**/*.{js,jsx}\"",
     "lint:scss": "stylelint 'src/**/*.scss' --syntax scss",
     "lint:scss:fix": "stylefmt --recursive 'src/**/*.scss'",
     "lint:js": "eslint . --ignore-path .gitignore --ext .js,.jsx",
@@ -22,6 +23,7 @@
     "bpk-component-text": "^1.0.87",
     "bpk-mixins": "^17.11.22",
     "bpk-stylesheets": "^3.2.134",
+    "eslint-config-skyscanner-with-prettier": "^0.4.0",
     "react": "^16.6.1",
     "react-dom": "^16.6.1"
   }
