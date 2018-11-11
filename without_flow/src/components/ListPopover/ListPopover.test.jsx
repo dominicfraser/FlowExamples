@@ -1,14 +1,14 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 
-import LinkPopover from './LinkPopover';
+import ListPopover from './ListPopover';
 
-const qtarget = jest.fn();
+const target = jest.fn();
 const onClose = jest.fn();
 
-describe('LinkPopover', () => {
+describe('ListPopover', () => {
   it('renders correctly with default props', () => {
-    const component = mount(<LinkPopover target={target} onClose={onClose} />);
+    const component = mount(<ListPopover target={target} onClose={onClose} />);
     expect(component.prop('isOpen')).toEqual(false);
     expect(component).toMatchSnapshot();
     component.unmount();
@@ -23,7 +23,7 @@ describe('LinkPopover', () => {
     };
 
     const component = shallow(
-      <LinkPopover target={target} onClose={onClose} strings={strings} />,
+      <ListPopover target={target} onClose={onClose} strings={strings} />,
     );
 
     expect(component).toMatchSnapshot();

@@ -5,7 +5,7 @@ import BpkPopover from 'bpk-component-popover';
 
 import defaultStrings from '../../strings/default-strings';
 
-const LinkPopover = ({ strings, onClose, isOpen, target }) => (
+const ListPopover = ({ strings, onClose, isOpen, target }) => (
   <BpkPopover
     id="list-popover"
     onClose={onClose}
@@ -22,15 +22,15 @@ const LinkPopover = ({ strings, onClose, isOpen, target }) => (
   </BpkPopover>
 );
 
-LinkPopover.propTypes = {
+ListPopover.propTypes = {
   strings: PropTypes.objectOf(PropTypes.string),
   onClose: PropTypes.func.isRequired,
   isOpen: PropTypes.bool,
   target: PropTypes.func.isRequired,
 };
 
-LinkPopover.defaultProps = {
+ListPopover.defaultProps = {
   strings: defaultStrings,
   isOpen: false,
 };
-export default LinkPopover;
+export default ListPopover;

@@ -1,3 +1,3 @@
-import LinkPopover from './LinkPopover';
+import ListPopover from './ListPopover';
 
-export default LinkPopover;
+export default ListPopover;
