@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LinkPopover renders correctly with default props 1`] = `
-<LinkPopover
+exports[`ListPopover renders correctly with default props 1`] = `
+<ListPopover
   isOpen={false}
   onClose={[Function]}
   strings={
@@ -49,10 +49,10 @@ exports[`LinkPopover renders correctly with default props 1`] = `
       targetRef={null}
     />
   </BpkPopoverPortal>
-</LinkPopover>
+</ListPopover>
 `;
 
-exports[`LinkPopover shallow renders correctly with given strings 1`] = `
+exports[`ListPopover shallow renders correctly with given strings 1`] = `
 <BpkPopoverPortal
   className={null}
   closeButtonIcon={true}

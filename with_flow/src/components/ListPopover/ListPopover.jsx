@@ -1,11 +1,18 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import { BpkList, BpkListItem } from 'bpk-component-list';
 import BpkPopover from 'bpk-component-popover';
 
 import defaultStrings from '../../strings/default-strings';
 
-const LinkPopover = ({ strings, onClose, isOpen, target }) => (
+type Props = {
+  strings: { [string_key: string]: string },
+  onClose: Function,
+  isOpen: boolean,
+  target: Function,
+};
+
+const ListPopover = ({ strings, onClose, isOpen, target }: Props) => (
   <BpkPopover
     id="list-popover"
     onClose={onClose}
@@ -22,15 +29,9 @@ const LinkPopover = ({ strings, onClose, isOpen, target }) => (
   </BpkPopover>
 );
 
-LinkPopover.propTypes = {
-  strings: PropTypes.objectOf(PropTypes.string),
-  onClose: PropTypes.func.isRequired,
-  isOpen: PropTypes.bool,
-  target: PropTypes.func.isRequired,
-};
-
-LinkPopover.defaultProps = {
+ListPopover.defaultProps = {
   strings: defaultStrings,
   isOpen: false,
 };
-export default LinkPopover;
+
+export default ListPopover;

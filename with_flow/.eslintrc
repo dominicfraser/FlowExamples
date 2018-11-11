@@ -16,6 +16,8 @@
       {
         "devDependencies": true
       }
-    ]
+    ],
+    "react/default-props-match-prop-types": ["error", { "allowRequiredDefaults": true }],
+    "react/prop-types": ["error", { "ignore": ["strings"]}]
   }
 }

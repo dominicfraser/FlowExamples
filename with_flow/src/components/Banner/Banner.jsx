@@ -1,5 +1,6 @@
-import PropTypes from 'prop-types';
+// @flow
 import React, { Component } from 'react';
+import type { Node } from 'react';
 import BpkButton from 'bpk-component-button';
 import BpkText from 'bpk-component-text';
 import reactStringReplace from 'react-string-replace';
@@ -8,8 +9,21 @@ import STYLES from './Banner.module.scss';
 import ListPopover from '../ListPopover';
 import defaultStrings from '../../strings/default-strings';
 
-class Banner extends Component {
-  constructor(props) {
+type Props = {
+  strings: { [string_key: string]: string },
+  hideBannerClick: Function,
+};
+
+type State = {
+  popoverIsOpen: boolean,
+};
+
+class Banner extends Component<Props, State> {
+  static defaultProps = {
+    strings: defaultStrings,
+  };
+
+  constructor(props: Props) {
     super(props);
     this.state = {
       popoverIsOpen: false,
@@ -35,13 +49,15 @@ class Banner extends Component {
     );
   }
 
-  togglePopover = () => {
+  stringWithPlaceholder: string;
+
+  togglePopover = (): void => {
     this.setState(prevState => ({
       popoverIsOpen: !prevState.popoverIsOpen,
     }));
   };
 
-  keyboardOnlyTogglePopover = e => {
+  keyboardOnlyTogglePopover = (e: SyntheticKeyboardEvent<>): void => {
     // Enter and Spacebar
     if (e.keyCode === 13 || e.keyCode === 32) {
       e.preventDefault();
@@ -50,7 +66,7 @@ class Banner extends Component {
   };
 
   render() {
-    const Popover = (
+    const Popover: Node = (
       <ListPopover
         onClose={this.togglePopover}
         isOpen={this.state.popoverIsOpen}
@@ -86,14 +102,5 @@ class Banner extends Component {
     );
   }
 }
-
-Banner.propTypes = {
-  strings: PropTypes.objectOf(PropTypes.string),
-  hideBannerClick: PropTypes.func.isRequired,
-};
-
-Banner.defaultProps = {
-  strings: defaultStrings,
-};
 
 export default Banner;
