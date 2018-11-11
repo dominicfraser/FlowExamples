@@ -1,6 +1,6 @@
-# [_Put your project name here_]
+# App Without Flow
 
-[_Add a brief description of your project here._]
+See the main README. This example uses propTypes and does not use Flow.
 
 ## npm script commands
 

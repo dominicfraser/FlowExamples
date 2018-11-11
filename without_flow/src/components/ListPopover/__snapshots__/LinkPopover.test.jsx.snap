@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkPopover renders correctly with default props 1`] = `
+<LinkPopover
+  isOpen={false}
+  onClose={[Function]}
+  strings={
+    Object {
+      "banner_close_btn": "Close",
+      "banner_first": "This is the first string in main text of the banner.",
+      "banner_ok_btn": "OK",
+      "banner_second": " This is contains a popover list in the middle of the string.",
+      "banner_third": " And this is the third.",
+      "list_item_one": "first list item",
+      "list_item_three": "third list item",
+      "list_item_two": "second list item",
+    }
+  }
+  target={[Function]}
+>
+  <BpkPopoverPortal
+    className={null}
+    closeButtonIcon={true}
+    closeButtonText="Close"
+    id="list-popover"
+    isOpen={false}
+    label="List bullet points"
+    labelAsTitle={false}
+    onClose={[Function]}
+    padded={true}
+    placement="bottom"
+    popperModifiers={null}
+    portalClassName={null}
+    portalStyle={null}
+    renderTarget={null}
+    target={[Function]}
+  >
+    <Portal
+      beforeClose={[Function]}
+      className="bpk-popover-portal"
+      closeOnEscPressed={true}
+      isOpen={false}
+      onClose={[Function]}
+      onOpen={[Function]}
+      onRender={[Function]}
+      renderTarget={null}
+      style={null}
+      target={[Function]}
+      targetRef={null}
+    />
+  </BpkPopoverPortal>
+</LinkPopover>
+`;
+
+exports[`LinkPopover shallow renders correctly with given strings 1`] = `
+<BpkPopoverPortal
+  className={null}
+  closeButtonIcon={true}
+  closeButtonText="Close"
+  id="list-popover"
+  isOpen={false}
+  label="List bullet points"
+  labelAsTitle={false}
+  onClose={[Function]}
+  padded={true}
+  placement="bottom"
+  popperModifiers={null}
+  portalClassName={null}
+  portalStyle={null}
+  renderTarget={null}
+  target={[Function]}
+>
+  <BpkList
+    className={null}
+    ordered={false}
+  >
+    <BpkListItem
+      className={null}
+    >
+      first list item
+    </BpkListItem>
+    <BpkListItem
+      className={null}
+    >
+      second list item
+    </BpkListItem>
+    <BpkListItem
+      className={null}
+    >
+      third list item
+    </BpkListItem>
+  </BpkList>
+</BpkPopoverPortal>
+`;
