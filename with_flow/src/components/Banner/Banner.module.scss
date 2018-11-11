@@ -1,0 +1,41 @@
+@import '~bpk-mixins';
+
+.Banner {
+  background-color: $bpk-color-blue-400;
+
+  &__wrapper {
+    display: flex;
+    width: 95%;
+    max-width: 1048px; /* stylelint-disable-line unit-blacklist */
+    min-height: $bpk-spacing-xxl;
+    margin: 0 auto;
+    padding: $bpk-spacing-base 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @include bpk-breakpoint-mobile {
+      flex-flow: column wrap;
+      align-items: flex-end;
+    }
+  }
+
+  &__text {
+    padding-right: $bpk-spacing-sm;
+    color: $bpk-color-white;
+  }
+
+  &__btn {
+    padding: $bpk-spacing-sm 0;
+  }
+
+  &__link {
+    color: $bpk-color-white;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:active {
+      color: $bpk-link-white-active-color;
+    }
+  }
+}

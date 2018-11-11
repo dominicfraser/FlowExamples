@@ -1,0 +1,40 @@
+{
+  "name": "with_flow",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "backpack-react-scripts": "6.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "prettier": "prettier --config .prettierrc --write \"**/*.{js,jsx}\"",
+    "lint:scss": "stylelint 'src/**/*.scss' --syntax scss",
+    "lint:scss:fix": "stylefmt --recursive 'src/**/*.scss'",
+    "lint:js": "eslint . --ignore-path .gitignore --ext .js,.jsx",
+    "lint:js:fix": "npm run lint:js -- --fix",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "bpk-component-button": "^2.1.27",
+    "bpk-component-list": "^1.1.66",
+    "bpk-component-popover": "^2.1.44",
+    "bpk-component-text": "^1.0.87",
+    "bpk-mixins": "^17.11.22",
+    "bpk-stylesheets": "^3.2.134",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "enzyme-to-json": "^3.3.4",
+    "eslint-config-skyscanner-with-prettier": "^0.4.0",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "react-string-replace": "^0.4.1"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  }
+}
