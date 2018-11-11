@@ -18,6 +18,8 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
     "bpk-component-button": "^2.1.27",
     "bpk-component-list": "^1.1.66",
     "bpk-component-popover": "^2.1.44",
@@ -28,6 +30,7 @@
     "enzyme-adapter-react-16": "^1.7.0",
     "enzyme-to-json": "^3.3.4",
     "eslint-config-skyscanner-with-prettier": "^0.4.0",
+    "flow-bin": "^0.86.0",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-string-replace": "^0.4.1"
