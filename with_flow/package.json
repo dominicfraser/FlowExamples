@@ -8,6 +8,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "flow": "flow",
+    "pretest": "npm run lint && npm run flow",
     "test": "react-scripts test --env=jsdom",
     "prettier": "prettier --config .prettierrc --write \"**/*.{js,jsx}\"",
     "lint:scss": "stylelint 'src/**/*.scss' --syntax scss",
